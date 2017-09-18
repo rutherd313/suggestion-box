@@ -3,7 +3,8 @@
 		<div ng-repeat="post in posts | orderBy: '-upvotes'">
 			<h1>{{post.title}}</h1>
 			<p><span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)"></span> Upvotes: {{post.upvotes}}</p>
-			<a href="#/suggestion/{{$index}}">Comments</a>
+		<!--<a href="#/suggestion/{{$index}}">Comments</a>-->
+			<a href="#/suggestion/{{ post.id }}">Comments</a></span>
 	</div>
 </div>
 <form ng-submit="addSuggestion()" style="margin-top: 50px">
@@ -13,3 +14,25 @@
 	</div>
 	<button type="submit" class="btn btn-primary">Suggest</button>
 </form>
+
+<!--<span class="entry-subtext">Upvotes: {{ post.upvotes }} | <a href="#/suggestion/{{ post.id }}">Comments</a></span>-->
+
+<!--
+<h1 class="page-title"><img src="img/lightbulb.svg" class="logo-image"><em>Suggestion Box</em></h1>
+<hr>
+<div class="list-item" ng-repeat="post in posts | orderBy: '-upvotes'">
+    <h1>{{post.title}}</h1>
+    <p>
+        <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)"></span>
+        <span class="entry-subtext">Upvotes: {{ post.upvotes }} | <a href="#/suggestion/{{ post.id }}">Comments</a></span>
+    </p>
+</div>
+
+<form ng-submit="addSuggestion()" style="margin-top: 50px">
+    <h3>Submit your suggestion</h3>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Great ideas here" ng-model="title"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Suggest</button>
+</form>
+-->

@@ -15,10 +15,10 @@ app.controller("SuggestionController", ["$scope", "$routeParams", "suggestions",
 	body: $scope.new_comment,  
 	upvotes: 0  	
 	}); 
- 	
+ 		
  	$scope.comment = "";
  	};
-
+	
  $scope.upVote = function(comment){
  	comment.upvotes += 1;
  };

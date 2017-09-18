@@ -16,9 +16,9 @@
 -->
 <div class="main">
 	<div class="container">
-		<div ng-repeat="post.comment in post.comments | orderBy: '-upvotes'">
-			<h1>{{post.comment.body}}</h1>
-			<p><span class="glyphicon glyphicon-plus-sign" ng-click="upVote(comment, $index)"></span> Upvotes: {{post.comment.upvotes}}</p>
+		<div ng-repeat="comment in post.comments | orderBy: '-upvotes'">
+			<h1>{{comment.body}}</h1>
+			<p><span class="glyphicon glyphicon-plus-sign" ng-click="upVote(comment)"></span> Upvotes: {{comment.upvotes}}</p>
 	</div>
 </div>
 <form ng-submit="addComment()" style="margin-top: 50px">
@@ -30,7 +30,14 @@
 </form>
 
 
-
+<!--
+<div class="comment" ng-repeat="comment in post.comments | orderBy:'-upvotes'">
+    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(comment)"></span> {{comment.upvotes}}
+    <span class="comment-body">
+      {{comment.body}}
+    </span>
+</div>
+-->
 
 
 
